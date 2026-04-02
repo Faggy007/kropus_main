@@ -1,0 +1,232 @@
+@import './fonts.css';
+@import './buttons.css';
+@import './form.css';
+@import './modal.css';
+@import './alert.css';
+@import './cookies-consent.css';
+@import '../../node_modules/swiper/swiper.css' layer(theme);
+@import '../../node_modules/swiper/modules/navigation.css';
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+@import "animate.css/animate.min.css";
+@import 'tailwindcss';
+@source inline("{sm:,md:,lg:,xl:,2xl:,}max-w-{sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl}"); /* Add this */
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --cc-card-bg-color: #FFFFFF!important;
+    --cc-card-text-color: #000000!important;
+    --cc-button-bg-color: #F96A0A!important;
+    --cc-button-bg-color-rgb: 249, 106, 10!important;
+    --cc-button-bg-opacity: 1!important;
+    --cc-button-text-color: #FFFFFF;
+}
+
+@theme {
+    --font-sans: Helvetica, Arial, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-alt: 'Inter', Helvetica, Arial, sans-serif;
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-accent: var(--color-neutral-800);
+    --color-accent-content: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-white);
+
+    --color-white: #FFFFFF;
+    --color-white-hover: #F1F1F1;
+    --color-white-active: #D5D5D5;
+    --color-primary: #F96A0A;
+    --color-primary-hover: #F35100;
+    --color-primary-active: #E24000;
+    --color-secondary: #3F6075;
+    --сolor-gray-lighter: #F8F8F8;
+    --color-gray-light: #BCBCBC;
+    --color-dark-light: #3F3F3F;
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer utilities {
+    .lh-100 {
+        @apply leading-[100%];
+    }
+
+    .lh-120 {
+        @apply leading-[120%];
+    }
+
+    .hero-gradient {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%);
+    }
+}
+
+@utility animation-button {
+    @apply
+    transition
+    duration-200
+    ease-in-out
+    transform
+    active:scale-95
+}
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    html {
+        @apply text-[16px] lg:text-[13px] xl:text-[13px] 2xl:text-[15px];
+    }
+
+    .title-1 {
+        @apply text-[2.5rem] lg:text-[4.375rem] leading-[100%] font-semibold font-alt;
+    }
+
+    .title-2 {
+        @apply text-[1.75rem] lg:text-[3.125rem] font-alt font-semibold lg:font-medium leading-[120%] tracking-[-1px];
+    }
+
+    .title-3 {
+        @apply font-alt text-[1.5rem] lg:text-[2.25rem] font-semibold leading-[100%] tracking-[-1px];
+    }
+
+    .subtitle-1 {
+        @apply font-alt text-[1rem] lg:text-[1.8125rem] leading-[120%];
+    }
+
+    .subtitle-2 {
+        @apply font-alt font-semibold tracking-[-0.84px] text-[1.25rem] lg:text-[1.75rem] leading-[106%];
+    }
+
+    .subtitle-3 {
+        @apply font-alt font-semibold tracking-[-0.72px] text-[1.5rem] lg:text-[2.25rem] leading-[100%];
+    }
+
+    .text-2 {
+        @apply lg:text-[1.4375rem] leading-[120%];
+    }
+
+    .text-3 {
+        @apply text-[0.875rem] lg:text-[1.125rem] leading-[120%];
+    }
+}
+
+.container {
+    @apply mx-auto px-5 max-w-full sm:max-w-[50rem] lg:max-w-[83.75rem];
+
+    .container {
+        @apply px-0;
+    }
+}
+
+.container-full {
+    @apply mx-auto px-5 max-w-full;
+}
+
+.custom-content {
+    @apply lg:text-[1.4375rem];
+
+    h2, h3, h4, h5, h6 {
+        @apply font-alt font-semibold mb-5;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    p {
+        @apply mb-4 lg:mb-5;
+    }
+
+    a {
+        @apply text-primary underline;
+    }
+
+    table {
+        @apply mb-4 w-full border-collapse border border-gray-light;
+
+        th, td {
+            @apply p-3 border border-gray-light;
+        }
+
+        th {
+            @apply font-alt text-left;
+        }
+
+        td {
+
+        }
+
+        p {
+            @apply mb-0;
+        }
+    }
+
+    .custom-content-block {
+        @apply mb-4 lg:mb-5;
+    }
+
+    ul {
+        @apply pl-8 mb-4 lg:mb-5;
+        list-style-type: square;
+
+        li {
+            @apply pl-2;
+
+            p {
+                @apply mb-2;
+            }
+        }
+
+        li::marker {
+            @apply text-primary;
+        }
+    }
+
+    > *:last-child {
+        @apply !mb-0;
+    }
+}
+
+.stretched-link:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wow {
+    visibility: hidden;
+}

@@ -1,0 +1,35 @@
+.alert {
+    @apply
+    relative
+    text-[1rem]
+    lg:text-[1.5rem]
+    leading-[120%]
+    p-[1rem]
+    lg:p-[1.5rem]
+    rounded-[0.375rem];
+}
+
+.alert-compact {
+    @apply
+    text-[1rem]
+    lg:text-[1.25rem]
+    p-[1rem]
+    lg:p-[1.25rem];
+}
+
+.alert-success {
+    @apply
+    bg-green-50
+    text-green-800
+    border
+    border-green-200;
+}
+
+.alert-danger,
+.alert-error {
+    @apply
+    bg-red-50
+    text-red-800
+    border
+    border-red-200;
+}

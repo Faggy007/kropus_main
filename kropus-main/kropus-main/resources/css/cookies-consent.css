@@ -1,0 +1,20 @@
+.cookie-consent-container {
+    border-top: 1px solid #E2E6EC;
+    box-shadow: none;
+}
+
+.cookie-consent-button-container button {
+    font-weight: 500;
+}
+
+.cookie-consent-reject {
+    display: none;
+}
+
+.cookie-consent-content-container {
+    @apply lg:!flex lg:!items-center lg:!flex-row;
+}
+
+.cookie-consent-button-container {
+    @apply lg:!justify-end lg:!w-auto lg:!flex-nowrap;
+}

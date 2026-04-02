@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+.form-control-wrap {
+
+}
+
+.form-control-input {
+    @apply bg-white py-[0.9rem] lg:py-[1.25rem] px-[1rem] lg:px-[1.25rem] lg:text-[1.4375rem] leading-[120%] rounded-[0.3125rem] lg:rounded-[0.375rem] w-full block border border-[#E2E6EC] focus:border-primary focus:outline focus:outline-primary transition;
+}
+
+.form-control-input::placeholder {
+    @apply text-[#9E9E9E];
+}
+
+.form-control-label {
+    @apply font-medium lg:text-[1.4375rem] leading-[120%] mb-3 block;
+}
+
+.form-control-error {
+    @apply text-[0.825rem] lg:text-[1rem] mt-[0.5rem] text-red-400;
+}

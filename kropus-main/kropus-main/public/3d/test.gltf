@@ -1,0 +1,204 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                2
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "ottoman",
+            "rotation" : [
+                -0.70710688829422,
+                0,
+                0,
+                0.7071066498756409
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "Point001",
+            "rotation" : [
+                0.70710688829422,
+                0,
+                0,
+                0.7071066498756409
+            ],
+            "translation" : [
+                0.00160980224609375,
+                -3.0517578125e-05,
+                -0.02460002899169922
+            ]
+        },
+        {
+            "children" : [
+                1
+            ],
+            "name" : "point_ottoman_grp"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "fabric_carpet_color_material.001",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "occlusionTexture" : {
+                "index" : 1
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 1
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Mesh",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "TEXCOORD_1" : 2,
+                        "NORMAL" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Fabric_Carpet_Color_Normal",
+            "uri" : "Fabric_Carpet_Color_Normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Fabric_Carpet_Color_AO-Fabric_Carpet_Color_Roughness-Fabric_Carpet_Color_Metallic",
+            "uri" : "Fabric_Carpet_Color_AO-Fabric_Carpet_Color_Roughness-Fabric_Carpet_Color_Metallic.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Fabric_Carpet_Color_BaseColor",
+            "uri" : "Fabric_Carpet_Color_BaseColor.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 38059,
+            "max" : [
+                22.781118392944336,
+                35,
+                22.8515682220459
+            ],
+            "min" : [
+                -22.784337997436523,
+                3.0517578125e-05,
+                -22.8023681640625
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 38059,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 38059,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 38059,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 216666,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 456708,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 304472,
+            "byteOffset" : 456708,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 304472,
+            "byteOffset" : 761180,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 456708,
+            "byteOffset" : 1065652,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 433332,
+            "byteOffset" : 1522360,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1955692,
+            "uri" : "Ottoman.bin"
+        }
+    ]
+}

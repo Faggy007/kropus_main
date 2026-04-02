@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@layer components {
+    .modal {
+        @apply hidden fixed top-0 left-0 w-full h-full items-center justify-center z-10000;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        &.--active {
+            @apply flex;
+        }
+    }
+
+    .is-clipped {
+        @apply overflow-hidden;
+    }
+}
